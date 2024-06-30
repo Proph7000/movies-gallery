@@ -36,16 +36,25 @@ export function MoviesListToolbar({
   }, [movies])
 
   return (
-    <Stack direction="row" justifyContent="space-between" mb={4}>
+    <Stack
+      direction={{ sm: 'row' }}
+      justifyContent="space-between"
+      gap={1}
+      mb={4}
+    >
       <MultipleSelectCheckmarks
         options={[...genres]}
         onChange={setSelectedGenres}
         currentOptions={selectedGenres}
         label="Genres"
-        sx={{ minWidth: 300 }}
+        sx={{ minWidth: { sm: 300 } }}
       />
 
-      <ListTypeSwitcher listType={listType} setListType={setListType} />
+      <ListTypeSwitcher
+        listType={listType}
+        setListType={setListType}
+        sx={{ ml: { xs: 'auto', sm: 'initial' } }}
+      />
     </Stack>
   )
 }
