@@ -1,0 +1,58 @@
+{
+  "name": "movies-gallery",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:loc": "tsc && vite build --sourcemap false",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --fix --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "serve:build": "npx -y pm2 serve ./dist/ 3000 --spa --name change-this-name && npx pm2 monit",
+    "prepare": "husky install",
+    "format": "prettier . --write"
+  },
+  "devDependencies": {
+    "@feature-sliced/eslint-config": "^0.1.1",
+    "@stylistic/eslint-plugin": "^2.3.0",
+    "@types/node": "^20.14.9",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.14.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-boundaries": "^4.2.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.2",
+    "vite": "^5.3.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "npm run lint:fix",
+    "*.{ts,css,html,json,tsx}": "npm run format"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.21",
+    "@mui/lab": "^5.0.0-alpha.170",
+    "@mui/material": "^5.15.21",
+    "axios": "^1.7.2",
+    "immer": "^10.1.1",
+    "path": "^0.12.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.0",
+    "vite-plugin-svgr": "^4.2.0",
+    "zustand": "^4.5.4"
+  }
+}
