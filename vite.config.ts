@@ -5,6 +5,7 @@ import svgr from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'https://proph7000.github.io/movies-gallery',
   plugins: [svgr(), react()],
   optimizeDeps: {
     include: ['@mui/material'],
