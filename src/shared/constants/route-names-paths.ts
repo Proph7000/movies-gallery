@@ -1,3 +1,3 @@
 export const routeNamesPath = {
-  main: '/',
+  main: '/movies-gallery',
 }

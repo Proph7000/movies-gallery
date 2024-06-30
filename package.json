@@ -1,7 +1,6 @@
 {
   "name": "movies-gallery",
   "private": true,
-  "homepage": "https://proph7000.github.io/movies-gallery/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
